@@ -7,14 +7,14 @@ DROP TABLE IF EXISTS locations;
 CREATE TABLE customers (
     customer_id TEXT PRIMARY KEY,
     customer_name TEXT NOT NULL,
-    segment TEXT
+    segment TEXT NOT NULL
 );
 
 CREATE TABLE products (
     product_id TEXT PRIMARY KEY,
     product_name TEXT NOT NULL,
-    category TEXT,
-    sub_category TEXT
+    category TEXT NOT NULL,
+    sub_category TEXT NOT NULL
 );
 
 CREATE TABLE locations (
@@ -28,10 +28,10 @@ CREATE TABLE locations (
 
 CREATE TABLE orders (
     order_id TEXT PRIMARY KEY,
-    order_date DATE,
-    ship_date DATE,
-    ship_mode TEXT,
-    order_priority TEXT
+    order_date DATE NOT NULL,
+    ship_date DATE NOT NULL,
+    ship_mode TEXT NOT NULL,
+    order_priority TEXT NOT NULL
 );
 
 CREATE TABLE order_details (
